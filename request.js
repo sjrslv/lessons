@@ -6,7 +6,7 @@ function func() {
   return new Promise((resolve, reject) => {
     console.log("request start");
     axios
-      .get("https://jsonplaceholder.typicode.com/todos/1")
+      .get("https://jsonplaceholder.typicode.com/todos")
       .then((response) => {
         const data = JSON.stringify(response.data);
         fs.writeFileSync("request.json", data);
